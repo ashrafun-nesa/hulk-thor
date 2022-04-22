@@ -4,6 +4,7 @@
 }
 
 body {
+  background-color: black;
   font-size: 16px;
   position: absolute;
   width: 100%;
@@ -120,10 +121,11 @@ body {
       transform: rotate(0);
     } 
     80% {
-      margin-top: 1em;
-      margin-left: 12em;
+      /* margin-top: 1em;
+      margin-left: 12em; */
       clip: rect(-1em, 11.2em, 12.55em, 7.625em); 
-      transform: rotate(-90deg);
+      transform: rotate(-90deg) translateX(-3.5em);
+      transform-origin: top;
     }
   
 }
@@ -133,7 +135,7 @@ body {
   width: 12.063em;
   height: 9.625em;
   border-radius: 50%;
-  background: white;
+  background:black;
   position: absolute;
   transform: translateY(1.25em);
   margin-left: -3.313em;
@@ -155,7 +157,7 @@ body {
   width: 12.063em;
   height: 9.625em;
   border-radius: 50%;
-  background: white;
+  background: black;
   position: absolute;
   transform: translateY(1.25em);
   margin-left: 4.563em;
@@ -556,23 +558,27 @@ body {
     height: 0px;
     opacity: 0;
   }
-}
+} */
 @keyframes mouthOpen {
-  77% {
+  50% {
     height: 0px;
   }
-  80% {
+  53% {
     height: 22px;
   }
-  93% {
+  66% {
     height: 22px;
     opacity: 1;
   }
-  95% {
+  71% {
     height: 0px;
     opacity: 0;
   }
-} */
+  80% {
+    height: 22px;
+    opacity: 1;
+  }
+}
 /* @-webkit-keyframes hulkHands {
   6% {
     box-shadow: 11.1em 0 0 #b5b500;
@@ -622,7 +628,7 @@ body {
     margin-left: -2.1em;
     transform: translate(0em, 0em);
   }
-   80% {
+   79% {
     width: 4.375em;
     height: 4.375em;
     position: absolute;
@@ -630,7 +636,7 @@ body {
     margin-top: 11.7em;
     margin-left: -2.1em;
     background: #949400;
-    box-shadow: 24em -8.7em 0 #b5b500;
+    box-shadow: 20.5em -10.7em 0 #b5b500;
     margin-left: -2.1em;
     /* transform: translate(.5em, 10em); */
   } 
@@ -652,7 +658,8 @@ body {
 
 
     97%{
-        transform: translate(40em, -5.9em);
+        transform: translate(50em, -5.9em) rotate(360deg);
+        
     }
 
 }
@@ -723,3 +730,42 @@ body {
     clip: rect(-0.188em, 6.1em, 13.875em, 2.3em);
   }
  }
+ .circle {
+  /* margin-top: 1000px;
+  margin-bottom: 500px; */
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  /* background: #0194c7; */
+  border: 2px solid white;
+  box-shadow: 0px 0px 200px;
+  margin: 10px;
+  transition: 5s ease;
+  position: absolute;
+  top: 200px;
+  left: 450px;
+  z-index: 1000;
+}
+.delay1 {
+          animation: waves 3s infinite 0.1s;
+}
+.delay2 {
+          animation: waves 3s infinite 0.7s;
+}
+.delay3 {
+          animation: waves 3s infinite 1.7s;
+}
+.delay4 {
+          animation: waves 3s infinite 2.5s;
+}
+
+@keyframes waves {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
